@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db } from "../auth/firebase";
+import { db } from "../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 export default function InputForm() {
   const [title, setTitle] = useState(" ");

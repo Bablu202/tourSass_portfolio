@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { auth, provider } from "../auth/firebase";
+import { auth, provider } from "../firebase/firebase";
 import { signInWithPopup } from "firebase/auth";
 import Main from "../components/Main";
 export default function SignInPage() {
   const [user, setUser] = useState(null);
-
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
@@ -16,7 +15,6 @@ export default function SignInPage() {
         console.log(err);
       });
   };
-
   const handleLogOut = () => {
     setUser(null);
   };

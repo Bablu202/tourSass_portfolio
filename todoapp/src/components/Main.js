@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 import InputForm from "./InputForm";
-import { db } from "../auth/firebase";
+import { db } from "../firebase/firebase";
 import {
   collection,
   query,
