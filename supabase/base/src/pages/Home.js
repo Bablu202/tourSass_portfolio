@@ -1,9 +1,13 @@
+import AllTasks from "../Components/AllTasks";
+
 const Home = () => {
   return (
     <div className="page home">
-      <h2>Home</h2>
+      <div>
+        <AllTasks />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

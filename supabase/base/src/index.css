@@ -97,6 +97,27 @@ li {
   justify-content: space-between;
   border: 0.1rem solid #12bca2;
 }
-.taskIcon {
-  border: none;
+
+.taskEditMode {
+  width: auto;
+  height: auto;
+}
+.taskIcons {
+  align-self: center;
+}
+
+@media (max-width: 479px) {
+  .AddTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    width: 80%;
+    margin: auto;
+  }
+  .task {
+    width: 90%;
+    align-self: center;
+  }
 }

@@ -12,8 +12,9 @@ export default function AddTask() {
     }
     const { data, error } = await supabase.from("tasks").insert([{ title }]);
     if (error) {
-      console.log(error);
       setFormError("plesae check the input Fields");
+      console.log(formError);
+      console.log(error);
     }
     if (data) {
       setFormError(null);
@@ -26,7 +27,7 @@ export default function AddTask() {
     <form onSubmit={handleSubmit}>
       <div className="AddTask">
         <input
-          placeholder="complete the tasks"
+          placeholder="Add tasks to remain you.."
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
