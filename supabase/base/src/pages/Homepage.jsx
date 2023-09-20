@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TableData from "../Components/TableData";
 import AddData from "../Components/AddData";
+import Data from "../Components/Data";
 const Homepage = ({ token }) => {
   let navigate = useNavigate();
 
@@ -19,6 +20,7 @@ const Homepage = ({ token }) => {
       <div className="table">
         <AddData />
         <TableData token={token} />
+        <Data />
       </div>
     </div>
   );

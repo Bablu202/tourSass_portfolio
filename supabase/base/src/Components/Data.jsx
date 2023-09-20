@@ -3,10 +3,11 @@ import { supabase } from "../supabase/client";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { IoMdDoneAll } from "react-icons/io";
 
-export default function Data({ task }) {
+export default function Data(task) {
   const [isEdit, setIsEdit] = useState(false);
   const [taskText, setTaskText] = useState(task.title);
   const [isComplete, setIsComplete] = useState(task.isDone);
+
   //delete task
 
   const deleteTask = async () => {
