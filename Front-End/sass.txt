@@ -8,7 +8,7 @@ Block {}
 Block__element{}
 Block__element-modifier{}
 
-
+-----------------------------------------------------------
 sass
 7-1 pattern
 ./base - 
@@ -19,7 +19,7 @@ sass
 ./abstracts - where code doenst output any css such as varibles
 ./vendors - like third party css goes
 
-
+--------------------------------------------------------------
 sass
 Varibles (fonts, colors)
 Nesting
@@ -28,9 +28,10 @@ Partials and imports (css in different files and import it into one)
 Mixins (reusable chunks of code)
 Functions 
 Extends (inherit)
+---------------------------------------------------------------
 Varibles 
 $color-primary : #fff
-
+scss nesting ---------------------------------------
 .nav{
 {
 -----
@@ -60,8 +61,8 @@ background-color : darken($color-varible, 5%)
 
 &::after{
 	content: ''
-	clear: both
 	display : table
+	clear: both
 }
 
 
@@ -79,13 +80,23 @@ userit any where
 
 @extend %btn-style 	// and add more styles
 
+----------------------------------------------
 
 
 
+principles of responsive design
+
+-fluid layouts		-	viewport - % or vh vw
+-responsive units	-	rem instead of px
+-flexible images	-	% or max width 
+-media queries		-	view port width 
 
 
 
+*fluid layouts 	-	float - flex - grid
+	
 
+*grid	
 
 
 
