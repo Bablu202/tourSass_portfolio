@@ -8,16 +8,16 @@ function App() {
   };
   return (
     <div className="header">
-      <div className="logo-box">
-        <img src={logoWhite} alt="logoW" className="logo" />
+      <div className="header__logo-box">
+        <img src={logoWhite} alt="logoW" className="header__logo" />
         Logo
       </div>
-      <div className="heading-box">
+      <div className="header__text-box">
         <h1 className="heading-primary">
-          <span className="heading-primary-main">climb-Up</span>
-          <span className="heading-primary-sub">is where life Happnes</span>
+          <span className="heading-primary--main">climb-Up</span>
+          <span className="heading-primary--sub">is where life Happnes</span>
         </h1>
-        <a href="" className="btn btn-white btn-anim" onClick={Discover}>
+        <a href="" className="btn btn--white btn--anim" onClick={Discover}>
           discover our tours
         </a>
       </div>

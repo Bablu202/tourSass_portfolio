@@ -1,0 +1,92 @@
+sass - block level boxes
+ display:block
+
+
+
+BEM 
+Block {}
+Block__element{}
+Block__element-modifier{}
+
+
+sass
+7-1 pattern
+./base - 
+./components
+./layouts
+./pages
+./themes
+./abstracts - where code doenst output any css such as varibles
+./vendors - like third party css goes
+
+
+sass
+Varibles (fonts, colors)
+Nesting
+operators (mathematical operations)
+Partials and imports (css in different files and import it into one)
+Mixins (reusable chunks of code)
+Functions 
+Extends (inherit)
+Varibles 
+$color-primary : #fff
+
+.nav{
+{
+-----
+	ul
+		----
+			&:first-child{
+				----
+			}
+	}
+}
+
+
+float broke objects fix
+
+::after{
+	content: ''
+	clear: both
+	display : table
+}
+
+--background color darken
+background-color : darken($color-varible, 5%)
+
+
+#Mixins
+@mixin clearfix(arguments){
+
+&::after{
+	content: ''
+	clear: both
+	display : table
+}
+
+
+userit any where
+@include clearfix
+
+
+//functions in scss
+
+//extends - 
+
+%btn-styles{
+	paste all the styles
+}
+
+@extend %btn-style 	// and add more styles
+
+
+
+
+
+
+
+
+
+
+
+
