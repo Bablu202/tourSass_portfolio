@@ -1,0 +1,67 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $color-grey-dark;
+  padding: 1rem;
+}
+
+//websignt name and sub heading typography
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  /*backface-visibility: hidden;*/
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 3rem;
+
+    animation: moveinLeft 1s ease-out;
+  }
+  &--sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 1.62rem;
+    animation: moveinRight 1s ease-out;
+  }
+}
+
+//MainHome jsx typography
+
+.heading-secondary {
+  font-size: $font-size-large;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primany-light,
+    $color-primany-dark
+  );
+  background-clip: text; //-webkit-background-clip
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.02);
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $font-size-default;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: $font-size-small;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
