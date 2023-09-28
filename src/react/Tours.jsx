@@ -46,14 +46,18 @@ export default function Tours() {
     <div key={i} className="col-1of3">
       <div className="card">
         <div className="card__side card__side--front">
-          <div className="card__picture">
-            <img src={e.image} alt="e" style={{ width: "100%" }} />
-          </div>
-          <div className="card__heading">{e.title}</div>
+          <div className={`card__picture card__picture--${i + 1}`}></div>
+          <h4 className="card__heading">
+            <span
+              className={`card__heading-span card__heading-span--${i + 1} `}
+            >
+              {e.title}
+            </span>
+          </h4>
           <div className="card__details">
             {e.details.map((f) => (
               <ul>
-                <li style={{ listStyleType: "none" }}>{f}</li>
+                <li>{f}</li>
               </ul>
             ))}
           </div>
@@ -61,19 +65,30 @@ export default function Tours() {
         <div
           className={`card__side card__side--back card__side--back-${i + 1}`}
         >
-          <h2>ONLY</h2>
-          {e.price}
-          <button className="btn">Order Now</button>
+          <div className=" card__cta">
+            <div className="card__price-box">
+              <p className="card__price-only">ONLY</p>
+              <p className="card__price-value">{e.price}</p>
+            </div>
+          </div>
+          <a href="#" className="card__price-btn btn btn--white">
+            Book Now
+          </a>
         </div>
       </div>
     </div>
   ));
   return (
     <div className="tours">
-      <div className="section-tours">
-        <div className="u-center-text u-marginB-8rem">
-          <h2 className="heading-secondary">Best Tours to choose</h2>
-          <div className="row">{tourDataMap}</div>
+      <div className="section-tours u-center-text">
+        <h2 className="heading-secondary u-marginB-8rem ">
+          Best Tours to choose
+        </h2>
+        <div className="row">{tourDataMap}</div>
+        <div className="u-marginB-8rem">
+          <a href="#" className="btn btn--green">
+            Discover all Tours
+          </a>
         </div>
       </div>
     </div>

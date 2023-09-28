@@ -1,5 +1,7 @@
 //button
 .btn {
+  font-size: $font-size-default;
+  font-weight: 100;
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -28,6 +30,13 @@
     color: $color-grey-dark;
     &::after {
       background-color: $color-white;
+    }
+  }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary;
     }
   }
 
