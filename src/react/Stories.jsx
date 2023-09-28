@@ -1,6 +1,8 @@
 import React from "react";
 import person1 from "../img/nat-8.jpg";
 import person2 from "../img/nat-9.jpg";
+import mp4Bg from "../img/video.mp4";
+import webm4Bg from "../img/video.webm";
 export default function Stories() {
   const storyData = [
     {
@@ -33,8 +35,19 @@ export default function Stories() {
   ));
 
   return (
-    <div className="section-stories u-center-text">
-      <h2 className="heading-secondary u-marginB-8rem">Best Tours to choose</h2>
+    <div className="section-stories">
+      <div className="bg-video">
+        <video className="bg-video__content" autoPlay muted loop>
+          <source src={mp4Bg} type="video/mp4" />
+          <source src={webm4Bg} type="video/webm" />
+          debugg the video data
+        </video>
+      </div>
+      <div className=" u-center-text">
+        <h2 className="heading-secondary u-marginB-8rem">
+          Best Tours to choose
+        </h2>
+      </div>
       {storyDataMap}
       <div className="u-center-text u-marginT-6rem">
         <a href="#" className="btn-text">

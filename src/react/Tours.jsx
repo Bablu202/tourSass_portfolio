@@ -79,7 +79,7 @@ export default function Tours() {
     </div>
   ));
   return (
-    <div className="tours">
+    <div className="section-tours">
       <div className="section-tours u-center-text">
         <h2 className="heading-secondary u-marginB-8rem ">
           Best Tours to choose
