@@ -10,7 +10,6 @@ export default function Header() {
     <div className="header">
       <div className="header__logo-box">
         <img src={logoWhite} alt="logoW" className="header__logo" />
-        Logo
       </div>
       <div className="header__text-box">
         <h1 className="heading-primary">
