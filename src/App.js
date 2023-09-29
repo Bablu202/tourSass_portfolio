@@ -5,6 +5,7 @@ import Features from "./react/Features";
 import Tours from "./react/Tours";
 import Stories from "./react/Stories";
 import Booking from "./react/Booking";
+import Footer from "./react/Footer";
 function App() {
   return (
     <div className="app">
@@ -14,6 +15,7 @@ function App() {
       <Tours />
       <Stories />
       <Booking />
+      <Footer />
     </div>
   );
 }
