@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import nat5 from "../img/nat-5.jpg";
 import nat6 from "../img/nat-6.jpg";
 import nat7 from "../img/nat-7.jpg";
+import BookPopUp from "./elements/BookPopUp";
 
 export default function Tours() {
+  const [isPopUp, setIsPopUp] = useState(false);
+
+  const popUpBookButton = (e) => {
+    e.preventDefault();
+    setIsPopUp((prev) => !prev);
+  };
   const tourData = [
     {
       title: "The Sea Explorer",
@@ -71,7 +78,11 @@ export default function Tours() {
               <p className="card__price-value">{e.price}</p>
             </div>
           </div>
-          <a href="#" className="card__price-btn btn btn--white">
+          <a
+            onClick={popUpBookButton}
+            href="#"
+            className="card__price-btn btn btn--white"
+          >
             Book Now
           </a>
         </div>
@@ -80,6 +91,7 @@ export default function Tours() {
   ));
   return (
     <div className="section-tours">
+      {isPopUp && <BookPopUp />}
       <div className="section-tours u-center-text">
         <h2 className="heading-secondary u-marginB-8rem ">
           Best Tours to choose

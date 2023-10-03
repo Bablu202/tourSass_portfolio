@@ -6,9 +6,13 @@ import Tours from "./react/Tours";
 import Stories from "./react/Stories";
 import Booking from "./react/Booking";
 import Footer from "./react/Footer";
+import NavElement from "./react/elements/NavElement";
+import BookPopUp from "./react/elements/BookPopUp";
 function App() {
   return (
     <div className="app">
+      <BookPopUp />
+      <NavElement />
       <Header />
       <MainHome />
       <Features />

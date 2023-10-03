@@ -1,0 +1,28 @@
+.popup {
+  position: relative;
+  background-color: rgba($color-black, 0.85);
+  height: 100vh;
+  width: auto;
+  z-index: 30;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    width: 75vw;
+    height: 60vh;
+  }
+  &__images {
+    img {
+      width: 42rem;
+      height: auto;
+    }
+  }
+
+  &__paragraph {
+    width: auto;
+    font-size: 1.5rem;
+  }
+}
