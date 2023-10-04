@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import nat5 from "../img/nat-5.jpg";
 import nat6 from "../img/nat-6.jpg";
 import nat7 from "../img/nat-7.jpg";
@@ -10,7 +10,24 @@ export default function Tours() {
   const popUpBookButton = (e) => {
     e.preventDefault();
     setIsPopUp((prev) => !prev);
+    console.log("popup - " + isPopUp);
   };
+  //escape to close the pop UP
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === "Escape") {
+        setIsPopUp(false);
+        console.log(" Escase");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
   const tourData = [
     {
       title: "The Sea Explorer",
@@ -91,7 +108,12 @@ export default function Tours() {
   ));
   return (
     <div className="section-tours">
-      {isPopUp && <BookPopUp />}
+      <div className="section-popup">
+        <div className={`section-popup__content--${isPopUp}`}>
+          {isPopUp && <BookPopUp isPopUp={isPopUp} setIsPopUp={setIsPopUp} />}
+        </div>
+      </div>
+
       <div className="section-tours u-center-text">
         <h2 className="heading-secondary u-marginB-8rem ">
           Best Tours to choose

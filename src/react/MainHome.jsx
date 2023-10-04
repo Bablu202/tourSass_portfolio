@@ -2,9 +2,10 @@ import React from "react";
 import photo1 from "../img/nat-1.jpg";
 import photo2 from "../img/nat-2.jpg";
 import photo3 from "../img/nat-3.jpg";
+
 export default function MainHome() {
   return (
-    <div>
+    <div id="book">
       <section className="section-about">
         <div className="u-center-text u-marginB-8rem">
           <h2 className="heading-secondary">

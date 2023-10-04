@@ -1,44 +1,51 @@
 import React from "react";
 import person1 from "../../img/nat-8.jpg";
 import person2 from "../../img/nat-9.jpg";
-export default function BookPopUp() {
+export default function BookPopUp({ isPopUp, setIsPopUp }) {
+  let value = isPopUp;
+  const popUp = (e) => {
+    e.preventDefault();
+    setIsPopUp(false);
+    value = setIsPopUp;
+
+    console.log("close on right top");
+  };
+
+  console.log("always" + isPopUp);
   return (
     <div className="popup">
       <div className="popup__content">
-        <div className="row">
-          <div className="col-1of2">
-            <div className="popup__images">
-              <img src={person1} alt="person1" />
-              <img src={person2} alt="person1" />
-            </div>
+        <div className={`popup__${value}`}>
+          <div className="popup__left">
+            <img src={person1} alt="person1" className="popup__img" />
+            <img src={person2} alt="person1" className="popup__img" />
           </div>
-          <div className="col-1of2">
-            <div className="popup__content-text">
-              <h1 className="heading-secondary u-marginT-4rem   u-marginB-6rem">
-                Start Booking Now
-              </h1>
-              <h3 className="heading-tertiary u-marginB-m">
-                Important - Please read the terms and Conditions
-              </h3>
-              <div className="row">
-                <div className="col-1of2">
-                  <p className="popup__paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nisi, debitis vel culpa magni eveniet delectus ut animi
-                    fugit, amet autem eaque. Eveniet, reprehenderit iste
-                    molestiae placeat id eos dolorum porro.
-                  </p>
-                </div>
-                <div className="col1-1of2">
-                  <p className="popup__paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nisi, debitis vel culpa magni eveniet delectus ut animi
-                    fugit, amet autem eaque. Eveniet, reprehenderit iste
-                    molestiae placeat id eos dolorum porro.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="popup__right">
+            <a href="" onClick={popUp} className="popup__close">
+              &times;
+            </a>
+            <h1 className="heading-secondary u-marginB-s">Start Booking Now</h1>
+            <h3 className="heading-tertiary u-marginB-s">
+              Important - Please read the terms and Conditions
+            </h3>
+            <p className="popup__text">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover many web sites still in their infancy. Contrary to popular
+              belief, Lorem Ipsum is not simply random text. It has roots in a
+              piece of classical Latin literature from 45 BC, making it over
+              2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            </p>
             <button className="btn btn--green u-marginT-6rem">Book Now</button>
           </div>
         </div>

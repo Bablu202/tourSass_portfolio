@@ -7,11 +7,10 @@ import Stories from "./react/Stories";
 import Booking from "./react/Booking";
 import Footer from "./react/Footer";
 import NavElement from "./react/elements/NavElement";
-import BookPopUp from "./react/elements/BookPopUp";
+import SectionTest from "./react/SectionTest";
 function App() {
   return (
     <div className="app">
-      <BookPopUp />
       <NavElement />
       <Header />
       <MainHome />
@@ -25,3 +24,4 @@ function App() {
 }
 
 export default App;
+//      <SectionTest />
