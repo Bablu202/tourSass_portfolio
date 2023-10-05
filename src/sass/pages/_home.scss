@@ -97,7 +97,7 @@ body {
   //responsive
   //1200px
   @include respond(tabland) {
-    padding: 8rem 0rem;
+    padding: 8rem 0;
   }
   //900
   @include respond(tabport) {
