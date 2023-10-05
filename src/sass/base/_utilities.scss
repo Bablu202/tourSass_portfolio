@@ -18,6 +18,11 @@
 }
 .u-marginT-8rem {
   margin-top: 8rem;
+  //responsive
+  //900
+  @include respond(tabport) {
+    margin-top: 2.5rem;
+  }
 }
 .u-marginT-6rem {
   margin-top: 6rem;

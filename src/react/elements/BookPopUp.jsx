@@ -2,11 +2,9 @@ import React from "react";
 import person1 from "../../img/nat-8.jpg";
 import person2 from "../../img/nat-9.jpg";
 export default function BookPopUp({ isPopUp, setIsPopUp }) {
-  let value = isPopUp;
   const popUp = (e) => {
     e.preventDefault();
     setIsPopUp(false);
-    value = setIsPopUp;
 
     console.log("close on right top");
   };
@@ -15,7 +13,7 @@ export default function BookPopUp({ isPopUp, setIsPopUp }) {
   return (
     <div className="popup">
       <div className="popup__content">
-        <div className={`popup__${value}`}>
+        <div className={`popup__${isPopUp}`}>
           <div className="popup__left">
             <img src={person1} alt="person1" className="popup__img" />
             <img src={person2} alt="person1" className="popup__img" />

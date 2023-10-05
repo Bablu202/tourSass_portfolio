@@ -7,17 +7,44 @@
     z-index: 5;
     transition: all 0.2s;
     outline-offset: 2rem;
+    //responsive
+    //900
+    @include respond(tabport) {
+      width: 38%;
+    }
+    //600
+    @include respond(phone) {
+      width: 42%;
+    }
     &--p1 {
       left: 0;
       top: -2rem;
+      //responsive
+      //900
+      @include respond(tabport) {
+        left: 2rem;
+        top: -4rem;
+      }
     }
     &--p2 {
       right: 0;
       top: 2rem;
+      //responsive
+      //900
+      @include respond(tabport) {
+        right: 35%;
+        top: 1rem;
+      }
     }
     &--p3 {
       left: 20%;
       top: 10rem;
+      //responsive
+      //900
+      @include respond(tabport) {
+        left: 10%;
+        top: 10rem;
+      }
     }
     &:hover {
       outline: 0.8rem solid $color-primary;

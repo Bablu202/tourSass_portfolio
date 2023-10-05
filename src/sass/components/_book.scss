@@ -12,6 +12,22 @@
     url(../../img/nat-10.jpg);
   &__form {
     width: 50%;
+    //responsive
+    //900
+    @include respond(tabport) {
+      width: 80%;
+    }
+  }
+  //responsive
+  //900
+  @include respond(tabport) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 74.8%,
+        transparent 75%
+      ),
+      url(../../img/nat-10.jpg);
   }
 }
 
@@ -55,6 +71,11 @@
     margin-top: 0.7rem;
     display: block;
     transition: all 0.3s;
+    //responsive
+    //900
+    @include respond(tabport) {
+      margin-top: 0rem;
+    }
   }
   &__input:placeholder-shown + &__label {
     opacity: 0;
@@ -64,6 +85,12 @@
   &__radio-group {
     width: 50%;
     display: inline-block;
+    //responsive
+    //900
+    @include respond(tabport) {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
   }
   &__radio-label {
     font-size: 1.5rem;

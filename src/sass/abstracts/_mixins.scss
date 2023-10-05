@@ -12,3 +12,71 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+//Media query
+
+/*
+0   - 600px     - Mobile
+600 - 900px   - Tablet
+900 - 1200px  - Tablet landscape mode
+here the default computer first our scss comes
+1800px  - Laptops
+1200px  - Big Moniters  no much change
+*/
+//base login
+
+/*
+@mixin res-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+-phone  - max 600
+-tab-port - max 900
+-tab-land - max 1200
+-desktop  - min 1800  + and more than 1800px
+1em or 1rem = 16px
+*/
+//break point media query manager
+@mixin respond($breakpoint) {
+  @if $breakpoint ==tabland {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tabport {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==phone {
+    //600px to em   - 600/16  - 37.5em
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desktop {
+    //1800
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+/*
+copy and change content inside
+//responsive
+//1200px
+ @include respond(tabland) {
+  }
+//900
+  @include respond(tabport) {
+  }
+  //600
+  @include respond(phone) {
+  }
+*/

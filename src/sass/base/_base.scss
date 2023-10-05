@@ -6,8 +6,35 @@
   box-sizing: inherit;
 }
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1 rem = 16px - setup 1 rem is 100% - 10/16 * 100 = 62.5%
+  //we changed 16px to 1rem
+  //default browser font size is 16px
+  //we changed to 10px from 100 % to 62.5%
+  @include respond(tabland) {
+    font-size: 56.25%; //9px
+  }
+  @include respond(tabport) {
+    font-size: 50%; //8px - 8/16 - 50%
+  }
+  @include respond(phone) {
+    font-size: 43.5%;
+  }
+
+  @include respond(desktop) {
+    font-size: 75%; //12px
+  }
 }
 body {
   box-sizing: border-box;
+  padding: 1.8rem;
+
+  @include respond(tabland) {
+    padding: 0.8rem;
+  }
+  @include respond(tabport) {
+    padding: 0.45rem;
+  }
+  @include respond(phone) {
+    padding: 0.1rem;
+  }
 }
