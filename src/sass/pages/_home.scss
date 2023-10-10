@@ -50,9 +50,6 @@ body {
   @include respond(tabport) {
     padding: 12rem 0.5rem 1rem 0.5rem;
   }
-  //600
-  @include respond(phone) {
-  }
 }
 
 //section Stories
