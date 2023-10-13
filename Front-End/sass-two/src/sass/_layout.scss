@@ -1,0 +1,93 @@
+.container {
+  max-width: 120rem;
+  min-height: 50rem;
+  background-color: var(--color-grey-2);
+  margin: 8rem auto;
+  box-shadow: var(--shadow-dark);
+}
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1px solid var(--color-yellow);
+}
+
+.content {
+  display: flex;
+}
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 22%;
+}
+.hotel-view {
+  background-color: #fff;
+  flex: 1;
+  //background-color: aqua; //debug color
+}
+
+//////////////////////////////////////////////////////
+//reviews
+
+.detail {
+  color: var(--color-grey-dark-1);
+  font-size: 1.2rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-1);
+  border-bottom: var(--line);
+  &__description {
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+  }
+  &__paragraph {
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__user-list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      flex: 0 0 50%;
+      margin-bottom: 0.7rem;
+    }
+    &-icon {
+      margin-right: 1rem;
+      color: var(--color-primary-1);
+    }
+  }
+  &__recommend-count {
+    color: var(--color-grey-dark-2);
+    margin-right: auto;
+  }
+  &__recommend-friends {
+    display: flex;
+    align-items: center;
+    &-img {
+      box-sizing: border-box;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: 0.25rem solid #fff;
+      &:not(:last-child) {
+        margin-right: -1.8rem;
+      }
+    }
+  }
+
+  &__user-reviews {
+    background-color: yellowgreen;
+    flex: 1;
+  }
+}

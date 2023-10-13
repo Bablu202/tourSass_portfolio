@@ -4,6 +4,9 @@
 .u-marginB-8rem {
   margin-bottom: 8rem;
 }
+.u-marginB-6rem {
+  margin-bottom: 6rem;
+}
 .u-marginB-s {
   margin-bottom: 1.5rem;
 }
@@ -12,4 +15,21 @@
 }
 .u-marginB-l {
   margin-bottom: 4.5rem;
+}
+.u-marginT-8rem {
+  margin-top: 8rem;
+  //responsive
+  //900
+  @include respond(tabport) {
+    margin-top: 2.5rem;
+  }
+}
+.u-marginT-6rem {
+  margin-top: 6rem;
+}
+.u-marginT-4rem {
+  margin-top: 4rem;
+}
+.u-marginL {
+  margin-left: 1.2rem;
 }

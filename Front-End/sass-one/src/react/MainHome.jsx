@@ -1,8 +1,11 @@
 import React from "react";
+import photo1 from "../img/nat-1.jpg";
+import photo2 from "../img/nat-2.jpg";
+import photo3 from "../img/nat-3.jpg";
 
 export default function MainHome() {
   return (
-    <div>
+    <div id="book">
       <section className="section-about">
         <div className="u-center-text u-marginB-8rem">
           <h2 className="heading-secondary">
@@ -32,7 +35,25 @@ export default function MainHome() {
               Learn more &rarr;
             </a>
           </div>
-          <div className="col-1of2">Image Content</div>
+          <div className="col-1of2">
+            <div className="composition">
+              <img
+                src={photo1}
+                alt="photo-1"
+                className="composition__photo composition__photo--p1"
+              />
+              <img
+                src={photo2}
+                alt="photo-2"
+                className="composition__photo composition__photo--p2"
+              />
+              <img
+                src={photo3}
+                alt="photo-3"
+                className="composition__photo composition__photo--p3"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>

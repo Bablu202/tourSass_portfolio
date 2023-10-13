@@ -8,6 +8,13 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respond(tabport) {
+      margin-bottom: $gutter-vertical-small;
+    }
+    @include respond(tabport) {
+      max-width: 50rem;
+      padding: 0 3rem;
+    }
   }
   @include clearfix;
   [class^="col-"] {
@@ -15,6 +22,17 @@
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tabport) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+    //responsive
+
+    //900
+    @include respond(tabport) {
+      width: 100% !important;
     }
   }
   .col-1of2 {
