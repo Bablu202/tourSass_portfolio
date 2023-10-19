@@ -89,6 +89,8 @@
       border-radius: 3.5rem;
     }
     &-name {
+      color: var(--color-primary-1);
+      font-weight: 100;
     }
   }
 }
@@ -152,10 +154,12 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 .legal {
+  margin-bottom: auto;
   font-size: 1.2rem;
   color: var(--color-grey-4);
-  text-align: center;
-  padding: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
 }
 /////////////////////////////////////////////////////////////////////////////////////////
 .gallery {
@@ -228,7 +232,7 @@
   }
 }
 //button Components
-.btn-inline {
+.btn {
   border: none;
   text-decoration: none;
   background: transparent;
@@ -237,15 +241,81 @@
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
   display: inline-block;
+
   cursor: pointer;
-  transition: all 0.2s;
-
-  &:hover {
-    outline: none;
-    animation: pul 1s infinite;
+  &-inline {
+    transition: all 0.2s;
+    &:hover {
+      outline: none;
+      animation: pul 1s infinite;
+    }
   }
+  &-show {
+    :last-child {
+      margin-left: 0rem;
+      transition: all 0.3s;
+    }
 
-  &:focus {
+    &:hover {
+      outline: none;
+      :last-child {
+        margin-left: 2rem;
+        transform: translateX(2rem);
+      }
+    }
+  }
+}
+.btn-book {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-2),
+    var(--color-primary-3)
+  );
+  border-radius: 20rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+  &-visible {
+    padding: 1.35rem 4.5rem;
+  }
+  &-invisible {
+    position: absolute;
+    padding: 1.35rem 0;
+    left: 0;
+    top: -100%;
+  }
+  &:hover &-visible {
+    transform: translateY(100%);
+  }
+  &:hover &-invisible {
+    top: 0;
+  }
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      var(--color-yellow),
+      var(--color-green-1)
+    );
+  }
+  :active {
+    background-image: linear-gradient(
+      to right,
+      var(--color-yellow),
+      var(--color-primary-1)
+    );
+    transform: scale(1.1);
   }
 }
 
@@ -265,4 +335,79 @@
 }
 
 //////////////////////////
-//detail
+//reviews
+.user__review {
+  text-align: center;
+  &-element {
+    text-align: left;
+    padding: 3rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 3.5rem;
+  }
+  &-text {
+    position: relative;
+    z-index: 10;
+  }
+  &-details {
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+  }
+  &-photo {
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  &-box {
+  }
+  &-name {
+    font-weight: 600;
+  }
+  &-date {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--color-grey-dark-3);
+  }
+  &-rating {
+    margin-left: auto;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--color-primary-1);
+  }
+}
+
+//" mark
+.user__reviwe-text {
+  position: relative;
+  z-index: 10;
+}
+.user__review-element {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "\201E";
+    position: absolute;
+    top: -6.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: rgba($color: #ffec5c, $alpha: 0.35);
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+}
+
+////////////////
+//cta
+.cta {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--color-grey-dark-1);
+  &__book-now {
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+}

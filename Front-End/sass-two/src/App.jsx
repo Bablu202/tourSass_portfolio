@@ -43,6 +43,8 @@ export default function App() {
     "perfect for Families",
     "AC and Warm optimizations",
   ];
+
+  //Hotel facilities
   const hotelIncludes = includes.map((e) => (
     <li className="detail__user-list-item">
       <span className="detail__user-list-icon">
@@ -51,9 +53,42 @@ export default function App() {
       {e}
     </li>
   ));
+  //All user images
   const reccommendFriends = [user1, user2, user3, user4, user5, user6];
   const listReccommendFriends = reccommendFriends.map((e) => (
     <img src={e} alt="user" className="detail__recommend-friends-img" />
+  ));
+
+  const reviewData = [
+    {
+      name: "Eve",
+      data: "22.Nov.2022",
+      dp: user6,
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugadoloremque architecto dicta animi, totam, itaque officia.",
+      rating: 8.6,
+    },
+    {
+      name: "WallE",
+      data: "01.Mar.2023",
+      dp: user4,
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.",
+      rating: 7.2,
+    },
+  ];
+  const userReview = reviewData.map((e) => (
+    <figure className="user__review-element">
+      <blockquote className="user__reviwe-text">{e.review}</blockquote>
+      <figcaption className="user__review-details">
+        <img src={e.dp} alt="user" className="user__review-photo" />
+        <div className="user-review-box">
+          <p className="user__review-name">{e.name}</p>
+          <p className="user__review-date">{e.data}</p>
+        </div>
+        <div className="user__review-rating">{e.rating}</div>
+      </figcaption>
+    </figure>
   ));
 
   return (
@@ -147,7 +182,7 @@ export default function App() {
               <div className="overview__icon-location">
                 <LocationIcon />
               </div>
-              <button className="btn-inline overview__location-text">
+              <button className=" btn btn-inline overview__location-text">
                 Heidelberg, Germany
               </button>
             </div>
@@ -177,17 +212,22 @@ export default function App() {
                 {listReccommendFriends}
               </div>
             </div>
+            <div className="user__review">
+              {userReview}
 
-            <div className="detail__user-reviews">
-              <p className="detail__user-reviwes__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                doloremque architecto dicta animi, totam, itaque officia ex.
-              </p>
-              <p className="detail__user-reviews__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                doloremque architecto dicta animi.
-              </p>
+              <button className="btn btn-show ">
+                Show all <span className="sp">&rarr;</span>
+              </button>
             </div>
+          </div>
+          <div className="cta">
+            <h2 className="cta__book-now">
+              Here you go, There are 4 more Available rooms for you!{" "}
+            </h2>
+            <button className="btn-book">
+              <span className="btn-book-visible">Book now</span>
+              <span className="btn-book-invisible">Only few left</span>
+            </button>
           </div>
         </div>
       </div>

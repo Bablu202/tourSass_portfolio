@@ -2,8 +2,12 @@
   max-width: 120rem;
   min-height: 50rem;
   background-color: var(--color-grey-2);
-  margin: 8rem auto;
+  margin: 5rem auto;
   box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+  }
 }
 .header {
   font-size: 1.4rem;
@@ -21,6 +25,7 @@
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 22%;
+  position: relative;
 }
 .hotel-view {
   background-color: #fff;
@@ -33,9 +38,9 @@
 
 .detail {
   color: var(--color-grey-dark-1);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: flex;
-  padding: 4.5rem;
+  padding: 2.5rem;
   background-color: var(--color-grey-1);
   border-bottom: var(--line);
   &__description {

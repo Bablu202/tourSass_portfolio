@@ -1,0 +1,79 @@
+%heading {
+  font-family: $font-sec;
+  font-weight: 300;
+}
+%heading-t {
+  font-family: $font-third;
+  font-weight: 300;
+}
+
+.heading-1 {
+  font-style: $font-third;
+  font-weight: 100;
+  font-size: 5rem;
+  color: #fff;
+  margin: 2rem;
+}
+.heading-2 {
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 1.2;
+  &--dark {
+    color: $color-dark-1;
+  }
+  &--light {
+    color: $color-light-1;
+  }
+}
+.heading-3 {
+  @extend %heading;
+  font-size: 2rem;
+  color: $color-prime-1;
+  text-transform: uppercase;
+}
+.heading-4 {
+  @extend %heading;
+  font-size: 2rem;
+  &--dark {
+    color: $color-dark-1;
+  }
+  &--light {
+    color: $color-light-1;
+  }
+}
+
+.btn {
+  background-color: $color-prime-1;
+  border: none;
+  //  border-radius: 1rem;
+  color: $color-light-1;
+  font-family: $font-prime;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: $color-prime-2;
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 5rem rgba(#aaa, 0.25);
+  }
+  &:active {
+    background-color: $color-prime-1;
+    transform: translateY(-2.5px);
+  }
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.mb-6 {
+  margin-bottom: 6rem;
+}

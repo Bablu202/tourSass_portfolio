@@ -97,6 +97,59 @@ principles of responsive design
 	
 
 *grid	
+//16.10.2023
+display:grid;
+row in x direction 
+column in y direction 
+///
+
+Expliciet - that we decleared
+implicet - that created automatically
+
+//grid basis
+
+display : grid;
+grid-template-row: repeat(2, 150px) || repeat(2, 1fr) || 150px 150px;
+grid-template-column : same as row
+
+grid-auto-flow: row || column;
+grid-auto-columns : 1fr || .5fr || 150px;
+grid-auto-rows: same as columns;
+
+//arrainging Grids 
+grid-row : 2 / span3 || 1/-1 || string from grid areas;
+grid-column: same as row
+
+Align grids to area : 
+
+justify-items : center ,start,end,space-between, space-around, space-evenly;
+
+align-items : center 
+
+
+//Aligning Tracks
+
+justify-content : center ,start,end,space-between, space-around, space-evenly;
+
+align-content : center 
+
+///auto-flow
+
+grid-auto-flow : row dense; // same for column dense to populate all spaces.
+
+
+///////////*********//////////
+
+min-contet max-content minmax()
+
+grid-template-rows: repeat(2, minmax(150px, min-content))
+grid-template-rows: repeat(auto-fill 100px) creates 100px rows with extra 
+						emptys spaces
+grid-template-rows: repeat(auto-fit 100px) create exact rows needed.
+//*/*/*/*/*/*//
+
+using both
+grid-template-rows:repeat(auto-fit, minmax(100px, 1fr))
 
 
 

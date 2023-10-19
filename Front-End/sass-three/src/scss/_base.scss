@@ -1,0 +1,44 @@
+//varibles,
+
+$color-prime-1: #c69963;
+$color-prime-2: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-light-1: #f9f7f6;
+$color-light-2: #aaa;
+
+$color-dark-1: #54483a;
+$color-dark-2: #6d5d4b;
+
+$font-prime: "Proza Libre", sans-serif;
+$font-sec: "Noto Sans", sans-serif;
+$font-third: "Source Sans 3", sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //to ger --10px = 1rem (normally browser default 16px = 1rem )
+}
+body {
+  font-family: $font-prime;
+  color: $color-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(2rem, 0.5fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(2rem, 0.5fr) [full-end];
+}
